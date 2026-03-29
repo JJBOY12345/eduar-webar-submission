@@ -1,5 +1,7 @@
 import { conceptMap } from "../data/modelContent.js";
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const MODEL_TEMPLATES = {
   heart: `
     <a-entity id="model-heart" visible="true" position="0 0.35 0" rotation="0 180 0" scale="0.55 0.55 0.55">
@@ -149,11 +151,11 @@ function buildSceneMarkup(concepts) {
       renderer="antialias: true; alpha: true; colorManagement: true; physicallyCorrectLights: true; precision: high;"
     >
       <a-assets timeout="15000">
-        <a-asset-item id="heart-glb" src="/assets/models/heart.glb"></a-asset-item>
-        <a-asset-item id="brain-glb" src="/assets/models/brain.glb"></a-asset-item>
-        <a-asset-item id="lungs-glb" src="/assets/models/lungs.glb"></a-asset-item>
-        <a-asset-item id="plant-cell-glb" src="/assets/models/plant-cell.glb"></a-asset-item>
-        <a-asset-item id="atom-glb" src="/assets/models/atom.glb"></a-asset-item>
+        <a-asset-item id="heart-glb" src="${BASE_URL}assets/models/heart.glb"></a-asset-item>
+        <a-asset-item id="brain-glb" src="${BASE_URL}assets/models/brain.glb"></a-asset-item>
+        <a-asset-item id="lungs-glb" src="${BASE_URL}assets/models/lungs.glb"></a-asset-item>
+        <a-asset-item id="plant-cell-glb" src="${BASE_URL}assets/models/plant-cell.glb"></a-asset-item>
+        <a-asset-item id="atom-glb" src="${BASE_URL}assets/models/atom.glb"></a-asset-item>
       </a-assets>
 
       <a-light type="ambient" color="#ffffff" intensity="0.7"></a-light>
