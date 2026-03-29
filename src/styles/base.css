@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --bg: #061118;
+  --bg-soft: rgba(6, 17, 24, 0.72);
+  --panel: rgba(10, 23, 32, 0.84);
+  --panel-strong: rgba(7, 18, 28, 0.94);
+  --line: rgba(255, 255, 255, 0.12);
+  --text: #eff7fb;
+  --muted: rgba(239, 247, 251, 0.72);
+  --muted-soft: rgba(239, 247, 251, 0.48);
+  --accent: #ff6b2c;
+  --accent-soft: rgba(255, 107, 44, 0.18);
+  --accent-2: #11c7af;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --radius-md: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 720px) {
+  html,
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(255, 107, 44, 0.18), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(17, 199, 175, 0.12), transparent 28%),
+    var(--bg);
+  color: var(--text);
+  font-family: "Outfit", sans-serif;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.glass-panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+}
+
+.eyebrow,
+.app-tag,
+.section-kicker,
+.info-kicker {
+  color: var(--accent-2);
+  font-family: "Space Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.bullet-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  line-height: 1.7;
+}

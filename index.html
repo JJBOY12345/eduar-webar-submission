@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta
+      name="description"
+      content="EduAR is a review-ready WebAR STEM learning prototype built with A-Frame and AR.js."
+    />
+    <title>EduAR WebAR Learning Prototype</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.4.2/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/3.4.5/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body>
+    <div id="scene-root" aria-hidden="true"></div>
+
+    <div id="app-shell">
+      <section id="splash" class="splash-panel">
+        <div class="splash-backdrop"></div>
+        <div class="splash-content">
+          <p class="eyebrow">Industry-Oriented AR Education Prototype</p>
+          <h1>EduAR</h1>
+          <p class="splash-copy">
+            Explore science concepts in 3D through a marker-based mobile WebAR
+            experience designed for interactive STEM learning.
+          </p>
+
+          <div class="splash-grid">
+            <article class="info-card">
+              <h2>Project Features</h2>
+              <ul class="bullet-list">
+                <li>Seven STEM learning topics visualized as 3D AR models</li>
+                <li>Marker-based mobile WebAR with no app installation required</li>
+                <li>Topic switching, 3-axis rotation, scaling, reset, and concept details</li>
+                <li>Clean student-friendly interface with guided onboarding</li>
+              </ul>
+            </article>
+
+            <article class="info-card marker-card">
+              <h2>Marker setup</h2>
+              <img
+                src="/assets/images/hiro-marker.png"
+                alt="Hiro marker preview"
+                class="marker-preview"
+              />
+              <p>
+                Print or open the Hiro marker on another screen, then point your
+                camera at it after starting the experience.
+              </p>
+            </article>
+          </div>
+
+          <div class="launch-row">
+            <button id="start-ar" class="primary-btn" type="button">
+              Launch AR Experience
+            </button>
+            <a
+              class="secondary-link"
+              href="/assets/images/hiro-marker.png"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open marker image
+            </a>
+          </div>
+
+          <p class="splash-note">
+            Current implementation: marker-based WebAR with A-Frame and AR.js.
+            This is a browser prototype, not a native Unity mobile build.
+          </p>
+        </div>
+      </section>
+
+      <aside id="info-panel" class="info-panel" aria-live="polite">
+        <button
+          id="info-close"
+          class="icon-btn close-btn"
+          type="button"
+          aria-label="Close concept details"
+        >
+          x
+        </button>
+        <p class="info-kicker">Concept Overview</p>
+        <h2 id="info-title">Human Heart</h2>
+        <p id="info-subtitle" class="info-subtitle">Biology | Grades 9-12</p>
+        <p id="info-description" class="info-description"></p>
+        <div id="info-stats" class="stats-grid"></div>
+      </aside>
+
+      <div id="ui-overlay" class="ui-overlay">
+        <header class="top-hud glass-panel">
+          <div class="hud-copy">
+            <p class="app-tag">EduAR</p>
+            <h2 id="active-concept" class="app-heading">Human Heart</h2>
+          </div>
+          <div class="status-stack">
+            <span id="marker-status" class="status-pill">Searching for marker</span>
+          </div>
+        </header>
+
+        <section id="scan-guide" class="scan-guide">
+          <div class="scan-frame">
+            <div class="scan-corners"></div>
+          </div>
+          <div class="scan-copy glass-panel">
+            <p class="section-kicker">Scan Marker</p>
+            <p class="scan-text">Point your camera at the Hiro marker and keep it centered.</p>
+          </div>
+        </section>
+
+        <section class="bottom-dock glass-panel">
+          <div class="sheet-handle" aria-hidden="true"></div>
+
+          <div class="dock-toolbar">
+            <button id="info-btn" class="icon-btn utility-btn" type="button">Info</button>
+            <button id="reset-btn" class="icon-btn utility-btn" type="button">Reset</button>
+          </div>
+
+          <div id="topic-selector" class="topic-selector" role="tablist" aria-label="Educational topics"></div>
+
+          <div class="controls-strip" aria-label="Model controls">
+            <span class="control-label">X</span>
+            <button data-action="rotate-x-up" class="control-btn round-btn" type="button" aria-label="Rotate X up">&uarr;</button>
+            <button data-action="rotate-x-down" class="control-btn round-btn" type="button" aria-label="Rotate X down">&darr;</button>
+            <span class="control-label">Y</span>
+            <button data-action="rotate-y-left" class="control-btn round-btn" type="button" aria-label="Rotate Y left">&larr;</button>
+            <button data-action="rotate-y-right" class="control-btn round-btn" type="button" aria-label="Rotate Y right">&rarr;</button>
+            <span class="control-label">Z</span>
+            <button data-action="rotate-z-left" class="control-btn round-btn" type="button" aria-label="Rotate Z counter clockwise">&#8634;</button>
+            <button data-action="rotate-z-right" class="control-btn round-btn" type="button" aria-label="Rotate Z clockwise">&#8635;</button>
+            <span class="control-label">S</span>
+            <button data-action="scale-up" class="control-btn round-btn" type="button" aria-label="Scale up">+</button>
+            <button data-action="scale-down" class="control-btn round-btn" type="button" aria-label="Scale down">&minus;</button>
+          </div>
+
+          <p class="dock-hint">Swipe the control tray sideways for more actions.</p>
+        </section>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,253 @@
+.splash-content h1 {
+  margin: 10px 0 10px;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 0.95;
+}
+
+.hud-copy {
+  min-width: 0;
+}
+
+.splash-copy,
+.splash-note,
+.helper-copy,
+.selector-note,
+.info-description,
+.info-card p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.splash-copy {
+  max-width: 640px;
+  font-size: 1.05rem;
+}
+
+.splash-note {
+  margin-top: 14px;
+  font-size: 0.95rem;
+}
+
+.info-card {
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+}
+
+.info-card h2 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+.marker-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.marker-preview {
+  width: min(220px, 100%);
+  border-radius: 18px;
+  background: white;
+  padding: 12px;
+}
+
+.primary-btn,
+.secondary-btn,
+.secondary-link,
+.topic-btn,
+.control-btn,
+.icon-btn {
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.primary-btn,
+.secondary-btn,
+.secondary-link {
+  padding: 12px 18px;
+  text-decoration: none;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, var(--accent), #ff8a57);
+  color: white;
+  box-shadow: 0 14px 30px rgba(255, 107, 44, 0.28);
+}
+
+.secondary-btn,
+.secondary-link {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--line);
+  color: var(--text);
+}
+
+.topic-selector {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-top: 10px;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+}
+
+.topic-selector::-webkit-scrollbar {
+  display: none;
+}
+
+.topic-btn {
+  flex: 0 0 auto;
+  padding: 11px 18px;
+  background: rgba(21, 24, 37, 0.88);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font-weight: 600;
+}
+
+.topic-btn.is-active {
+  background: linear-gradient(135deg, var(--accent), #ff814d);
+  border-color: rgba(255, 107, 44, 0.85);
+  color: #fff7f1;
+  box-shadow: 0 14px 24px rgba(255, 107, 44, 0.22);
+}
+
+.dock-toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.app-heading {
+  margin: 2px 0 0;
+}
+
+.app-heading {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.status-stack {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.status-pill {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-family: "Space Mono", monospace;
+  font-size: 0.72rem;
+}
+
+.status-pill-muted {
+  color: var(--muted-soft);
+}
+
+.status-pill-live {
+  background: rgba(17, 199, 175, 0.16);
+  border-color: rgba(17, 199, 175, 0.4);
+  color: #dffdf9;
+}
+
+.sheet-handle {
+  width: 48px;
+  height: 5px;
+  margin: 0 auto 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.utility-btn {
+  padding: 10px 18px;
+  min-width: 78px;
+  background: rgba(25, 28, 42, 0.92);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.controls-strip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-top: 8px;
+  padding-bottom: 2px;
+  scrollbar-width: none;
+}
+
+.controls-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.control-label {
+  flex: 0 0 auto;
+  color: var(--muted-soft);
+  font-family: "Space Mono", monospace;
+  font-size: 0.82rem;
+  padding: 0 2px 0 6px;
+}
+
+.control-btn,
+.icon-btn {
+  background: rgba(25, 28, 42, 0.92);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+.round-btn {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover,
+.secondary-link:hover,
+.topic-btn:hover,
+.control-btn:hover,
+.icon-btn:hover {
+  transform: translateY(-1px);
+}
+
+.dock-hint {
+  margin: 8px 0 2px;
+  color: var(--muted-soft);
+  font-size: 0.78rem;
+  text-align: center;
+  font-family: "Space Mono", monospace;
+}
+
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+@media (max-width: 620px) {
+  .dock-toolbar {
+    justify-content: space-between;
+  }
+
+  .top-hud {
+    max-width: 100%;
+  }
+}
