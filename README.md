@@ -18,6 +18,12 @@ This repository focuses on the core learning experience requested in the brief:
 - mobile-friendly use
 - clean student-facing interface
 
+## Live Demo
+
+- GitHub Pages deployment: [https://jjboy12345.github.io/eduar-webar-submission/](https://jjboy12345.github.io/eduar-webar-submission/)
+- Recommended test device: `Mobile phone browser with camera access`
+- Desktop or laptop can open the UI, but the full AR experience is intended for phones
+
 ## Project Showcase
 
 Home and launch flow:
@@ -55,6 +61,7 @@ To build an augmented reality educational application that presents learning con
 
 - Seven STEM concepts in AR: Heart, Solar System, DNA, Brain, Lungs, Plant Cell, and Atom
 - Marker-based 3D visualization using the Hiro marker
+- Live deployment through GitHub Pages for direct browser-based access
 - Topic selection directly inside the AR interface
 - Rotation controls on X, Y, and Z axes
 - Scale up, scale down, and reset controls
